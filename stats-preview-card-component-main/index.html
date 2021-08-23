@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Stats preview card component</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- this is the div card to add the images and add the picture info here -->
+    <div class="card picture">
+      <div class="overlay">
+
+        <!-- <picture>
+        <source media="(min-width: 768px)" srcset="./images/image-header-desktop.jpg">
+        <img src="./images/image-header-mobile.jpg" alt="" />
+      </picture> -->
+        <!--We are going to add a picture tag and this will take a source attribute media syntax. This is similar like media queries: and what this mean: "(min-width: )" once we exceed this widht the images will change whatever we specify the path inside of srcset="" . We also need to make sure to specify a different value in case the one we specify in the picture do not load. We are going to create a img tag to include the mobile image, we want the mobile img to load by default  -->
+
+        <!-- we are going to create a div to wrap the h1, p,ul,li into one section and then we create another div card for the images-->
+      </div>
+    </div>
+    <div class="card">
+      <!-- in order to have the insights in color purple we need to make sure to wrapped in an span b/c that need to ahve a specific color -->
+      <h1> Get the <span>insights </span> that helps your business grow</h1>
+      <p> Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.</p>
+      <ul>
+        <li><span> 10k+</span> companies
+        </li>
+        <li> <span> 314</span> templates
+
+        </li>
+        <li> <span>12m+ </span> queries
+
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Alice Piar</a>.
+  </div>
+</body>
+
+</html>

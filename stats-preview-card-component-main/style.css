@@ -1,0 +1,158 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  /* for the image to change position when the screen is re-size */
+  max-width: 100%;
+}
+ul {
+  /* to remove the list bullets we need to use list style-type to none */
+
+  list-style-type: none;
+}
+body {
+  font-family: "Inter", sans-serif;
+  /* we are going to put a background color the same color we have added in the root very dark blue */
+  background-color: var(--very-dark-blue);
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  /* per the style-guide I added the font size to 15px */
+  color: hsla(0, 0%, 100%, 0.6);
+}
+/* used variables to add the color into the root section , when you name the colors using variables you need to used -- */
+.container {
+  background-color: var(--dark-desaturated-blue);
+  color: hsl(0, 0%, 100%);
+  margin: 50px 20px;
+  /* to move the container we need to add some margin and padding as well to the left, right, bottom */
+  padding: 0 0 20px;
+  border-radius: 10px;
+  text-align: center;
+
+  /* need to find the difference of doing a varibale color or normal color syntaxis */
+}
+.container .picture {
+  background: url("./images/image-header-mobile.jpg") no-repeat center/cover;
+  height: 400px;
+  border-radius: 10px 10px 0 0;
+}
+
+.container .picture .overlay {
+  background-color: hsl(277, 64%, 61%, 0.7);
+  /* adding 0.5 I was able to see the photo since it was purple all over it */
+  height: 400px;
+  border-radius: 10px 10px 0 0;
+  /* missed to added the border radius- adding this the image had a curve */
+}
+.container .card h1 {
+  margin: 30px 0 20px;
+  /* margin top is 30, margin botton is 20 , left and right is 0 and we need toa dd some padding to move the h1 inwards, the line height is to add the correct height to the font*/
+  padding: 0 20px;
+  line-height: 1.3;
+  font-family: "Lexend Deca", sans-serif;
+}
+.container .card h1 span {
+  color: hsl(277, 64%, 61%);
+}
+.container .card p {
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+.container .card ul li {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.container .card ul li span {
+  display: block;
+  text-transform: lowercase;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Lexend Deca", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+/* .container .card span {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 600;
+  font-family: "Lexend Deca", sans-serif;
+  /* padding: 30px 0 0px; */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+  padding-bottom: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: left;
+    /* 1fr means 1 fractional*/
+  }
+  .container .picture {
+    background: url("./images/image-header-desktop.jpg") no-repeat center/cover;
+    min-width: 50%;
+    border-radius: 0 10px 10px 0;
+  }
+  .container .picture .overlay {
+    background-color: hsl(277, 64%, 61%, 0.7);
+    height: 400px;
+    border-radius: 0 10px 10px 0;
+  }
+  .container .card ul {
+    padding-left: 20px;
+    display: flex;
+  }
+  .container .card ul li {
+    margin-right: 30px;
+    /* to separate and make a space to where it said companies, templates */
+    font-size: 13px;
+  }
+  .container .card ul li span {
+    display: block;
+    text-transform: lowercase;
+    font-weight: 700;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 24px;
+    margin-bottom: 3px;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .container .card:nth-child(2) {
+    padding: 0 30px;
+    /* this was added to add more space betwen the card and the message  */
+  }
+  .container .card p {
+    margin-bottom: 50px;
+  }
+}
